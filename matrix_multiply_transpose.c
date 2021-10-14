@@ -43,44 +43,36 @@ int main(int argc, char *argv[])
 	//initialize memory 
 	float * matA;
 	float * matB;
+	float * matBnew;
 	float * matC;
 	
 	matA = malloc(N*N*sizeof(float));
 	matB = malloc(N*N*sizeof(float));
+    matBnew = calloc(N*N,sizeof(float));
 	matC = calloc(N*N,sizeof(float));
 	
 	//randomize A and B
 	randomizeMatrix(R_CONST,N,matA);
 	randomizeMatrix(R_CONST,N,matB);
-	int tmp;
-    
-    // transpose B
-    ///for (i = 0; i < N; i++){
-		//for (j = 0; j < N; j++){
-		//	for (k = 0; k < N; k++){
-			//	tmp = matB[index(k,j,N)];
-				//matB[index(k,j,N)] = matB[index(j,k,N)];
-				//matB[index(j,k,N)] = tmp;
-            //}
-		//}
-	//}
+	float tmp = 0;
 	
 	//get start time 
 	double time;
 	time = omp_get_wtime();
 
-	
+    //transpose matrix b
+		for (j = 0; j < N; j++){
+			for (k = 0; k < N; k++){
+                matBnew[index(j, k, N)] = matB[index(k, j, N)];
+            }
+        }
 	
 	//do matrix multiply
 	for (i = 0; i < N; i++){
 		for (j = 0; j < N; j++){
 			float val = 0;
-			for (k = 0; k < N; k++){
-				//tmp = matB[index(k,j,N)];
-				//matB[index(k,j,N)] = matB[index(j,k,N)];
-				//matB[index(j,k,N)] = tmp;
-				val += matA[index(i,k,N)]*matB[index(k,j*N,N)];
-            }
+			for (k = 0; k < N; k++)
+				val += matA[index(i,k,N)]*matBnew[index(j,k,N)];
 			matC[index(i,j,N)] = val;
 		}
 	}
@@ -96,7 +88,7 @@ int main(int argc, char *argv[])
 	printf("Performed a %d x %d matrix multiply transpose in %f seconds\n", N, N, time);
 	printf("Number of floating point operations = 2 * %d^3 = %ld\n", N, FLOP);
 	printf("Flops = %e\n", Flops);
-    printf("Element 6 from matrix C: %f\n", matC[index(4,5,N)]);
+    printf("Element from Matrix C[4][5]: %f\n", matC[index(4,5,N)]);
 	#endif
 	
 	//(optional) save metrics to file if argv[2] exists

@@ -76,10 +76,9 @@ int main(int argc, char *argv[])
     
 	//do matrix multiply
         float val = 0;
-        #pragma omp parallel for private(i, j, k)
+        #pragma omp parallel for private(i, j, k) schedule(static, 128) collapse(2)
         for (i = 0; i < N; i++){
             for (j = 0; j < N; j++){
-                matC[index(i,j,N)] = 0;
                 for (k = 0; k < N; k++)
                     matC[index(i,j,N)] += matA[index(i,k,N)]*matBnew[index(j,k,N)];
             }

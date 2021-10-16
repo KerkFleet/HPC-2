@@ -66,10 +66,10 @@ int main(int argc, char *argv[])
 	
 	//do matrix multiply
 		for (j = 0; j < N; j++){
-			float val = 0;
+			//float val = 0;
 			for (k = 0; k < N; k++)
-				val += matA[index(i,k,N)]*matB[k];
-			matC[k] = val;
+				matC[j] += matA[index(j,k,N)]*matB[k];
+			//matC[k] = val;
 		}
     
 	//calculate elapsed time for matrix multiply
@@ -83,6 +83,7 @@ int main(int argc, char *argv[])
 	printf("Performed a %d x %d matrix vector multiply in %f seconds\n", N, N, time);
 	printf("Number of floating point operations = 2 * %d^3 = %ld\n", N, FLOP);
 	printf("Flops = %e\n", Flops);
+    printf("value 4 from Matc: %f", matC[4]);
 	#endif
 	
 	//(optional) save metrics to file if argv[2] exists

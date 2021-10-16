@@ -101,13 +101,13 @@ int main(int argc, char *argv[])
 		if(!csv_file){
 			//not created, reopen file as write, write column headers
 			csv_file = fopen(argv[2],"w");
-			fprintf(csv_file, "N,FLOP,Flops,s\n");
+			fprintf(csv_file, "N,FLOP,Flops,s,Threads\n");
 		}
 		fclose(csv_file); //close outside brackets in case the fopen in read worked
 		
 		// file is created from here onward, open in append mode and add the data 
 		csv_file = fopen(argv[2],"a");
-		fprintf(csv_file, "%d,%ld,%e,%lf\n",N,FLOP,Flops,time);
+		fprintf(csv_file, "%d,%ld,%e,%lf,%d\n",N,FLOP,Flops,time,num_threads);
 		fclose(csv_file);
 	}
 	

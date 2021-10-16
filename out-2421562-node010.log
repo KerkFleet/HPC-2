@@ -1,0 +1,55 @@
+
+Currently Loaded Modules:
+  1) shared   2) slurm/RT_SLURM/19.05.7   3) gcc/5.5.0
+
+ 
+
+2
+------------------------------ Mat_vect ----------------------------------------------
+/cm/local/apps/slurm/var/spool/job2421562/slurm_script: line 20: 39967 Segmentation fault      ./matvec 16777216 final_3.2.1.csv
+-
+------------------------------ Dot_PROD ----------------------------------------------
+Performed a 16777216 x 16777216 Dot product in 0.028520 seconds
+Number of floating point operations = 2 * 16777216^3 = -9223372036854775808
+Flops = -3.233964e+20
+matC[8] = 2758.4675294
+------------------------------ Mat_vect ----------------------------------------------
+/cm/local/apps/slurm/var/spool/job2421562/slurm_script: line 20: 39974 Segmentation fault      ./matvec 16777216 final_3.2.1.csv
+-
+------------------------------ Dot_PROD ----------------------------------------------
+Performed a 16777216 x 16777216 Dot product in 0.014865 seconds
+Number of floating point operations = 2 * 16777216^3 = -9223372036854775808
+Flops = -6.204821e+20
+matC[8] = 2758.4675298
+------------------------------ Mat_vect ----------------------------------------------
+/cm/local/apps/slurm/var/spool/job2421562/slurm_script: line 20: 39983 Segmentation fault      ./matvec 16777216 final_3.2.1.csv
+-
+------------------------------ Dot_PROD ----------------------------------------------
+Performed a 16777216 x 16777216 Dot product in 0.008185 seconds
+Number of floating point operations = 2 * 16777216^3 = -9223372036854775808
+Flops = -1.126847e+21
+matC[8] = 2758.46752916
+------------------------------ Mat_vect ----------------------------------------------
+/cm/local/apps/slurm/var/spool/job2421562/slurm_script: line 20: 39999 Segmentation fault      ./matvec 16777216 final_3.2.1.csv
+-
+------------------------------ Dot_PROD ----------------------------------------------
+Performed a 16777216 x 16777216 Dot product in 0.005031 seconds
+Number of floating point operations = 2 * 16777216^3 = -9223372036854775808
+Flops = -1.833221e+21
+matC[8] = 2758.46752932
+------------------------------ Mat_vect ----------------------------------------------
+/cm/local/apps/slurm/var/spool/job2421562/slurm_script: line 20: 40034 Segmentation fault      ./matvec 16777216 final_3.2.1.csv
+-
+------------------------------ Dot_PROD ----------------------------------------------
+Performed a 16777216 x 16777216 Dot product in 0.003563 seconds
+Number of floating point operations = 2 * 16777216^3 = -9223372036854775808
+Flops = -2.588474e+21
+matC[8] = 2758.46752940
+------------------------------ Mat_vect ----------------------------------------------
+/cm/local/apps/slurm/var/spool/job2421562/slurm_script: line 20: 40098 Segmentation fault      ./matvec 16777216 final_3.2.1.csv
+-
+------------------------------ Dot_PROD ----------------------------------------------
+Performed a 16777216 x 16777216 Dot product in 0.014378 seconds
+Number of floating point operations = 2 * 16777216^3 = -9223372036854775808
+Flops = -6.414982e+20
+matC[8] = 2758.467529

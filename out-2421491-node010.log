@@ -1,0 +1,42 @@
+
+Currently Loaded Modules:
+  1) shared   2) slurm/RT_SLURM/19.05.7   3) gcc/5.5.0
+
+ 
+
+-
+2
+Performed a 4096 x 4096 matrix multiply transpose in 176.153221 seconds
+Number of floating point operations = 2 * 4096^3 = 137438953472
+Flops = 7.802239e+08
+Element from Matrix C[4][5]: 258400.421875
+-
+4
+Performed a 4096 x 4096 matrix multiply transpose in 90.503804 seconds
+Number of floating point operations = 2 * 4096^3 = 137438953472
+Flops = 1.518599e+09
+Element from Matrix C[4][5]: 258400.421875
+-
+8
+Performed a 4096 x 4096 matrix multiply transpose in 47.124152 seconds
+Number of floating point operations = 2 * 4096^3 = 137438953472
+Flops = 2.916529e+09
+Element from Matrix C[4][5]: 258400.421875
+-
+16
+Performed a 4096 x 4096 matrix multiply transpose in 23.993719 seconds
+Number of floating point operations = 2 * 4096^3 = 137438953472
+Flops = 5.728122e+09
+Element from Matrix C[4][5]: 258400.421875
+-
+32
+Performed a 4096 x 4096 matrix multiply transpose in 13.145453 seconds
+Number of floating point operations = 2 * 4096^3 = 137438953472
+Flops = 1.045525e+10
+Element from Matrix C[4][5]: 258400.421875
+-
+40
+Performed a 4096 x 4096 matrix multiply transpose in 11.716368 seconds
+Number of floating point operations = 2 * 4096^3 = 137438953472
+Flops = 1.173051e+10
+Element from Matrix C[4][5]: 258400.421875

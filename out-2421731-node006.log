@@ -1,0 +1,67 @@
+
+Currently Loaded Modules:
+  1) shared   2) slurm/RT_SLURM/19.05.7   3) gcc/5.5.0
+
+ 
+
+2
+------------------------------ Mat_vect ----------------------------------------------
+Performed a 32768 x 32768 matrix vector multiply in 1.824517 seconds
+Number of floating point operations = 2 * 32768^3 = 70368744177664
+Flops = 3.856842e+13
+value 4 from Matc: 353748.093750-
+------------------------------ Dot_PROD ----------------------------------------------
+Performed a 16777216 x 16777216 Dot product in 0.028497 seconds
+Number of floating point operations = 2 * 16777216^3 = -9223372036854775808
+Flops = -3.236615e+20
+matC[8] = 2758.4675294
+------------------------------ Mat_vect ----------------------------------------------
+Performed a 32768 x 32768 matrix vector multiply in 0.973453 seconds
+Number of floating point operations = 2 * 32768^3 = 70368744177664
+Flops = 7.228779e+13
+value 4 from Matc: 353748.093750-
+------------------------------ Dot_PROD ----------------------------------------------
+Performed a 16777216 x 16777216 Dot product in 0.015140 seconds
+Number of floating point operations = 2 * 16777216^3 = -9223372036854775808
+Flops = -6.092120e+20
+matC[8] = 2758.4675298
+------------------------------ Mat_vect ----------------------------------------------
+Performed a 32768 x 32768 matrix vector multiply in 0.541823 seconds
+Number of floating point operations = 2 * 32768^3 = 70368744177664
+Flops = 1.298741e+14
+value 4 from Matc: 353748.093750-
+------------------------------ Dot_PROD ----------------------------------------------
+Performed a 16777216 x 16777216 Dot product in 0.008379 seconds
+Number of floating point operations = 2 * 16777216^3 = -9223372036854775808
+Flops = -1.100773e+21
+matC[8] = 2758.46752916
+------------------------------ Mat_vect ----------------------------------------------
+Performed a 32768 x 32768 matrix vector multiply in 0.272876 seconds
+Number of floating point operations = 2 * 32768^3 = 70368744177664
+Flops = 2.578778e+14
+value 4 from Matc: 353748.093750-
+------------------------------ Dot_PROD ----------------------------------------------
+Performed a 16777216 x 16777216 Dot product in 0.005004 seconds
+Number of floating point operations = 2 * 16777216^3 = -9223372036854775808
+Flops = -1.843120e+21
+matC[8] = 2758.46752932
+------------------------------ Mat_vect ----------------------------------------------
+Performed a 32768 x 32768 matrix vector multiply in 0.142159 seconds
+Number of floating point operations = 2 * 32768^3 = 70368744177664
+Flops = 4.949991e+14
+value 4 from Matc: 353748.093750-
+------------------------------ Dot_PROD ----------------------------------------------
+Performed a 16777216 x 16777216 Dot product in 0.003897 seconds
+Number of floating point operations = 2 * 16777216^3 = -9223372036854775808
+Flops = -2.366912e+21
+matC[8] = 2758.46752940
+------------------------------ Mat_vect ----------------------------------------------
+Performed a 32768 x 32768 matrix vector multiply in 0.151969 seconds
+Number of floating point operations = 2 * 32768^3 = 70368744177664
+Flops = 4.630470e+14
+value 4 from Matc: 353748.093750-
+------------------------------ Dot_PROD ----------------------------------------------
+Performed a 16777216 x 16777216 Dot product in 0.003767 seconds
+Number of floating point operations = 2 * 16777216^3 = -9223372036854775808
+Flops = -2.448748e+21
+matC[8] = 2758.467529

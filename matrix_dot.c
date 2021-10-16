@@ -25,8 +25,13 @@ void randomizeMatrix(float range, int N, float * matrix){
     }
 }
 
+int num_threads;
 int main(int argc, char *argv[])
 { 
+    #pragma omp parallel
+    #pragma omp master
+    num_threads = omp_get_num_threads();
+    
 	int i,j,k,N;
 	
 	if(argc < 2){
@@ -57,14 +62,9 @@ int main(int argc, char *argv[])
 	time = omp_get_wtime();
 	
 	//do dot product
-    float total = 0;
+    #pragma omp parallel for
 	for (i = 0; i < N; i++){
-		float val = 0;
-		val = matA[i]*matB[i];
-        total+=val;
-		matC[i] = val;
-        //printf("%f:%f:%f\n",matA[i],matB[i],matC[i]);
-		
+		matC[i] = matA[i]*matB[i];
 	}
     
 	
@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
 	printf("Performed a %d x %d Dot product in %f seconds\n", N, N, time);
 	printf("Number of floating point operations = 2 * %d^3 = %ld\n", N, FLOP);
 	printf("Flops = %e\n", Flops);
-    printf("TotalVal = %f", total);
+    printf("matC[%d] = %f", 8, matC[8]);
 	#endif
 	
 	//(optional) save metrics to file if argv[2] exists
@@ -91,13 +91,13 @@ int main(int argc, char *argv[])
 		if(!csv_file){
 			//not created, reopen file as write, write column headers
 			csv_file = fopen(argv[2],"w");
-			fprintf(csv_file, "N,FLOP,Flops,s\n");
+			fprintf(csv_file, "N,FLOP,Flops,s,Threads\n");
 		}
 		fclose(csv_file); //close outside brackets in case the fopen in read worked
 		
 		// file is created from here onward, open in append mode and add the data 
 		csv_file = fopen(argv[2],"a");
-		fprintf(csv_file, "%d,%ld,%e,%lf\n",N,FLOP,Flops,time);
+		fprintf(csv_file, "%d,%ld,%e,%lf,%d\n",N,FLOP,Flops,time,num_threads);
 		fclose(csv_file);
 	}
 	

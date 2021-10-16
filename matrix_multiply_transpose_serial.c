@@ -30,10 +30,6 @@ static int num_threads;
 
 int main(int argc, char *argv[])
 { 
-    #pragma omp parallel
-    #pragma omp master
-    num_threads = omp_get_num_threads();
-    
 	int i,j,k,N;
 	
 	if(argc < 2){
@@ -75,8 +71,6 @@ int main(int argc, char *argv[])
 	
     
 	//do matrix multiply
-        float val = 0;
-        #pragma omp parallel for private(i, j, k)
         for (i = 0; i < N; i++){
             for (j = 0; j < N; j++){
                 matC[index(i,j,N)] = 0;
